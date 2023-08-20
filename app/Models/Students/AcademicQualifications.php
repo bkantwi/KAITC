@@ -15,7 +15,8 @@ class AcademicQualifications extends Model
         [
           'from',
           'to',
-          'name_of_insti_and_loc',
+          'name_of_insti',
+          'insti_loc',
           'programme',
           'class_awarded',
           'user_id',

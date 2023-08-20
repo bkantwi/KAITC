@@ -95,14 +95,37 @@
             <!-- Step 2 -->
             <div class="step">
                 <h2 class="mt-6 text-xl font-semibold text-gray-900">
-                    Step 2: Contact Information
+                    Step 2: Academic / Professional Qualifications
                 </h2>
                 <div class="mt-6">
-                    <!-- Questions for step 2 -->
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="email" class="mt-1 p-2 w-full border rounded-md">
+                    <label for="from" class="block text-sm font-medium text-gray-700">Year Started</label>
+                    <input type="text" id="from" name="from" class="mt-1 p-2 w-full border rounded-md">
                 </div>
-                <!-- Add 3 more questions for step 2 -->
+
+                <div class="mt-6">
+                    <label for="to" class="block text-sm font-medium text-gray-700">Year Ended</label>
+                    <input type="text" id="to" name="to" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <div class="mt-6">
+                    <label for="name_of_insti" class="block text-sm font-medium text-gray-700">Name of Institution</label>
+                    <input type="text" id="name_of_insti" name="name_of_insti" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <div class="mt-6">
+                    <label for="insti_loc" class="block text-sm font-medium text-gray-700">Location of Institution</label>
+                    <input type="text" id="insti_loc" name="insti_loc" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <div class="mt-6">
+                    <label for="programme" class="block text-sm font-medium text-gray-700">Programme</label>
+                    <input type="text" id="programme" name="programme" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <div class="mt-6">
+                    <label for="class_awarded" class="block text-sm font-medium text-gray-700">Class Awarded</label>
+                    <input type="text" id="class_awarded" name="class_awarded" class="mt-1 p-2 w-full border rounded-md">
+                </div>
             </div>
 
             <!-- Step 3 -->
