@@ -16,4 +16,10 @@ class Funding extends Model
         'source_of_funds',
         'user_id',
     ];
+
+    // Define the relationship between Address and User
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

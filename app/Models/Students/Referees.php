@@ -21,4 +21,10 @@ class Referees extends Model
         'ref1_email',
         'user_id',
     ];
+
+    // Define the relationship between Address and User
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

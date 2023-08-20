@@ -20,4 +20,10 @@ class AcademicQualifications extends Model
           'class_awarded',
           'user_id',
         ];
+
+    // Define the relationship between Address and User
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
