@@ -414,11 +414,28 @@
             <!-- Final Step -->
             <div class="step">
                 <h2 class="mt-6 text-xl font-semibold text-gray-900">
-                    Step 3: Additional Information
+                    Step 8: Emergency Contact
                 </h2>
                 <div class="mt-6">
-                    <!-- Questions for step 3 -->
-                    <!-- Add 4 questions for step 3 -->
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="emergency_family_name" class="block text-sm font-medium text-gray-700">Family Name</label>
+                        <input type="text" id="emergency_family_name" name="emergency_family_name" class="mt-1 p-2 w-full border rounded-md">
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="emergency_given_name" class="block text-sm font-medium text-gray-700">Date Employment Started</label>
+                        <input type="text" id="emergency_given_name" name="emergency_given_name" class="mt-1 p-2 w-full border rounded-md">
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="emergency_relationship" class="block text-sm font-medium text-gray-700">Date Employment Started</label>
+                        <input type="text" id="emergency_relationship" name="emergency_relationship" class="mt-1 p-2 w-full border rounded-md">
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="prev_date_emp" class="block text-sm font-medium text-gray-700">Date Employment Started</label>
+                        <input type="tel" id="prev_date_emp" name="prev_date_emp" class="mt-1 p-2 w-full border rounded-md">
+                    </div>
                 </div>
             </div>
 
