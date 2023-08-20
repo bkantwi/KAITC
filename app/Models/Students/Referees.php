@@ -13,12 +13,12 @@ class Referees extends Model
 
     protected $fillable =
     [
-        'ref1_name',
-        'ref1_position',
-        'ref1_relationship',
-        'ref1_address',
-        'ref1_telephone',
-        'ref1_email',
+        'referee_name',
+        'referee_phone',
+        'referee_email',
+        'referee_relationship',
+        'referee_position',
+        'referee_address',
         'user_id',
     ];
 

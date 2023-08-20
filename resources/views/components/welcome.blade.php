@@ -126,10 +126,10 @@
                 </div>
             </div>
 
-            <!-- Step 3 -->
+            <!-- Step 7 -->
             <div class="step">
                 <h2 class="mt-6 text-xl font-semibold text-gray-900">
-                    Step 3: Language Skills
+                    Step 3: Language
                 </h2>
                 <div class="mt-6">
                     <label for="first_language" class="block text-sm font-medium text-gray-700">What is your first language?</label>
@@ -307,7 +307,108 @@
                 <div class="col-span-2 sm:col-span-1">
                     <input type="file" id="cv" name="cv" class="mt-1 p-2 w-full border rounded-md">
                 </div>
+            </div>
 
+            <!-- Step 5 -->
+            <div class="step">
+                <h2 class="mt-6 text-xl font-semibold text-gray-900">
+                    Step 5: Essays
+                </h2>
+                <h2 class="mt-6 text-xl font-semibold text-gray-900">
+                    a. Essay 1: Why youwantto join the KAIPTC Master’s Course.
+                    Your essay should cover the following:
+                </h2>
+                <label for="essay_one" class="block text-sm font-medium text-gray-700">(a) Explain your principal reasons for wishing to join the KAIPTC Masters Course.<br >
+                    (b) Describe your career aspirations in the next decade.<br >
+                    (c) Describe the contribution you will make to the programme when admitted.<br >
+                    (d) State if you will be sponsored and indicate the value you will add to your sponsoring
+                    organization.
+                    </label>
+                <div class="col-span-2 sm:col-span-1">
+                    <input type="file" id="essay_one" name="essay_one" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+
+                <h2 class="mt-6 text-xl font-semibold text-gray-900">
+                    b. Essay 2: Describe one Accomplishment That Occurred in the Last Five Years of Which You Are
+                    Most Proud and Why
+                </h2>
+                <label for="essay_two" class="block text-sm font-medium text-gray-700">Essays should be a maximum of 1000 words each, typed and be on separate
+                    sheets
+                </label>
+                <div class="col-span-2 sm:col-span-1">
+                    <input type="file" id="essay_two" name="essay_two" class="mt-1 p-2 w-full border rounded-md">
+                </div>
+            </div>
+
+            {{-- Step 6 --}}
+            <div class="step">
+                <h2 class="mt-6 text-xl font-semibold text-gray-900">
+                    Step 6: Funding
+                </h2>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-medium text-gray-700">Which of the following sources of finance do you propose to use in funding your KAIPTC
+                        Masters course.</label>
+                    <div class="mt-2">
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio" name="source_of_funds" value="Self-funding">
+                            <span class="ml-2">Self-funding</span>
+                        </label>
+
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio" name="source_of_funds" value="Self-funding with Bank Loan">
+                            <span class="ml-2">Self-funding with Bank Loan</span>
+                        </label>
+
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio" name="source_of_funds" value="Self-funding with employer
+                            contributions">
+                            <span class="ml-2">Self-funding with employer contributions
+                            </span>
+                        </label>
+
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio" name="source_of_funds" value="Employer Sponsorship">
+                            <span class="ml-2"> Employer Sponsorship</span>
+                        </label>
+
+                        <label class="inline-flex items-center">
+                            <input type="radio" class="form-radio" name="source_of_funds" value="Scholarship">
+                            <span class="ml-2">Scholarship</span>
+                        </label>
+
+                        <label class="inline-flex items-center">
+                            Other (Please Specify)
+                        </label>
+                        <input type="text" class="form-radio" name="source_of_funds">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="step">
+                <h2 class="mt-6 text-xl font-semibold text-gray-900">
+                    Step 7: Referees
+                </h2>
+
+                <h5 class="mt-6 text-xl font-semibold text-gray-900">
+                    Please list two referees who have direct knowledge of your intellectual ability and/or
+                    yourprofessional skills. If you have leftfurtheror higher educationwithin the lastfive years,
+                    you should state one academic reference and one employment-related reference.
+                </h5>
+
+                <div class="mt-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="col-span-2 sm:col-span-1">
+                            <div id="referees-container">
+                                <!-- Dynamic input fields will be added here -->
+                            </div>
+                            <button type="button" id="add-referee" class="mt-4 px-4 py-2 bg-blue-500 text-black rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">
+                                Add Referee
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Final Step -->
@@ -415,5 +516,49 @@
 
         // Event listener for the "Add Language" button
         addLanguageButton.addEventListener("click", createLanguageFields);
+    });
+</script>
+
+{{-- Dynamic referee add script --}}
+<script>
+    // JavaScript to handle dynamic input field addition
+    document.addEventListener("DOMContentLoaded", function () {
+        const refereesContainer = document.getElementById("referees-container");
+        const addRefereeButton = document.getElementById("add-referee");
+
+        // Function to create a new set of input fields for a referee
+        function createRefereeFields() {
+            const refereeFields = document.createElement("div");
+            refereeFields.classList.add("mt-6");
+
+            refereeFields.innerHTML = `
+                <h2 class="mt-6 text-xl font-semibold text-gray-900">
+                    Referee Details
+                </h2>
+
+                <label for="referee_name" class="block text-sm font-medium text-gray-700">Referee Name</label>
+                <input type="text" name="referee_name[]" class="mt-1 p-2 w-full border rounded-md">
+
+                <label for="referee_email" class="block mt-2 text-sm font-medium text-gray-700">Referee Email</label>
+                <input type="email" name="referee_email[]" class="mt-1 p-2 w-full border rounded-md">
+
+                <label for="referee_relationship" class="block mt-2 text-sm font-medium text-gray-700">Relationship</label>
+                <input type="text" name="referee_relationship[]" class="mt-1 p-2 w-full border rounded-md">
+
+                <label for="referee_phone" class="block mt-2 text-sm font-medium text-gray-700">Phone Number</label>
+                <input type="tel" name="referee_phone[]" class="mt-1 p-2 w-full border rounded-md">
+
+                <label for="referee_position" class="block mt-2 text-sm font-medium text-gray-700">Position</label>
+                <input type="text" name="referee_position[]" class="mt-1 p-2 w-full border rounded-md">
+
+                <label for="referee_address" class="block mt-2 text-sm font-medium text-gray-700">Address</label>
+                <input type="text" name="referee_address[]" class="mt-1 p-2 w-full border rounded-md">
+            `;
+
+            refereesContainer.appendChild(refereeFields);
+        }
+
+        // Event listener for the "Add Referee" button
+        addRefereeButton.addEventListener("click", createRefereeFields);
     });
 </script>
