@@ -129,7 +129,7 @@
             <!-- Step 3 -->
             <div class="step">
                 <h2 class="mt-6 text-xl font-semibold text-gray-900">
-                    Step 2: Language Skills
+                    Step 3: Language Skills
                 </h2>
                 <div class="mt-6">
                     <label for="first_language" class="block text-sm font-medium text-gray-700">What is your first language?</label>
@@ -219,14 +219,94 @@
                             <div id="languages-container">
                                 <!-- Dynamic input fields will be added here -->
                             </div>
-                            <button type="button" id="add-language" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">
+                            <button type="button" id="add-language" class="mt-4 px-4 py-2 bg-blue-500 text-black rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-300">
                                 Add Language
                             </button>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step">
+                <h2 class="mt-6 text-xl font-semibold text-gray-900">
+                    Step 4: EMPLOYMENT (include a current CV or Resume)
+                </h2>
+
+                <h5 class="mt-6 text-xl font-semibold text-gray-900">
+                    a. Current Employment
+                </h5>
+                <div class="grid grid-cols-2 gap-6 mt-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="col-span-2 sm:col-span-1">
+                            <label for="name_of_org" class="block text-sm font-medium text-gray-700">Name of Organisation</label>
+                            <input type="text" id="name_of_org" name="name_of_org" class="mt-1 p-2 w-full border rounded-md">
+                        </div>
+                        <div class="col-span-2 sm:col-span-1">
+                            <label for="job_title" class="block text-sm font-medium text-gray-700">Job Title / Position Held</label>
+                            <input type="text" id="job_title" name="job_title" class="mt-1 p-2 w-full border rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="date_emp" class="block text-sm font-medium text-gray-700">Date Employment Started</label>
+                        <input type="date" id="date_emp" name="date_emp" class="mt-1 p-2 w-full border rounded-md">
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="department" class="block text-sm font-medium text-gray-700">Department</label>
+                        <input type="text" id="department" name="department" class="mt-1 p-2 w-full border rounded-md">
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="total_experience" class="block text-sm font-medium text-gray-700">Total experience on current job (years)</label>
+                        <input type="number" id="total_experience" name="total_experience" class="mt-1 p-2 w-full border rounded-md">
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="job_address" class="block text-sm font-medium text-gray-700">Address</label>
+                        <input type="text" id="job_address" name="job_address" class="mt-1 p-2 w-full border rounded-md">
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="job_country" class="block text-sm font-medium text-gray-700">Country</label>
+                        <input type="text" id="job_country" name="job_country" class="mt-1 p-2 w-full border rounded-md">
+                    </div>
+
+                    <h5 class="mt-6 text-xl font-semibold text-gray-900">
+                        b. Previous Employment (if any)
+                    </h5>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="col-span-2 sm:col-span-1">
+                            <label for="prev_org" class="block text-sm font-medium text-gray-700">Name of Organisation</label>
+                            <input type="text" id="prev_org" name="prev_org" class="mt-1 p-2 w-full border rounded-md">
+                        </div>
+                        <div class="col-span-2 sm:col-span-1">
+                            <label for="prev_job_title" class="block text-sm font-medium text-gray-700">Job Title / Position Held</label>
+                            <input type="text" id="prev_job_title" name="prev_job_title" class="mt-1 p-2 w-full border rounded-md">
+                        </div>
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="prev_date_emp" class="block text-sm font-medium text-gray-700">Date Employment Started</label>
+                        <input type="date" id="prev_date_emp" name="prev_date_emp" class="mt-1 p-2 w-full border rounded-md">
+                    </div>
+
+                    <div class="col-span-2 sm:col-span-1">
+                        <label for="prev_address" class="block text-sm font-medium text-gray-700">Address</label>
+                        <input type="text" id="prev_address" name="prev_address" class="mt-1 p-2 w-full border rounded-md">
+                    </div>
 
                 </div>
 
+                <h2 class="mt-6 text-xl font-semibold text-gray-900">
+                    c. CV
+                </h2>
+
+                <div class="col-span-2 sm:col-span-1">
+                    <input type="file" id="cv" name="cv" class="mt-1 p-2 w-full border rounded-md">
+                </div>
 
             </div>
 

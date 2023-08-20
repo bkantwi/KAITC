@@ -18,12 +18,13 @@ class Employment extends Model
         'date_emp',
         'department',
         'total_experience',
-        'address',
-        'country',
+        'job_address',
+        'job_country',
         'prev_org',
         'prev_job_title',
         'prev_date_emp',
         'prev_address',
+        'cv',
         'user_id',
     ];
 
