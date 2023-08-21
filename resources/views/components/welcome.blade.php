@@ -1,5 +1,5 @@
 <div class="p-6 lg:p-8 bg-white border-b border-gray-200">
-    <x-application-logo class="block h-12 w-auto" />
+    {{-- <x-application-logo class="block h-12 w-auto" /> --}}
 
     <h1 class="mt-8 text-2xl font-medium text-gray-900">
         Kindly fill each step to complete your application. All the best!
@@ -423,18 +423,18 @@
                     </div>
 
                     <div class="col-span-2 sm:col-span-1">
-                        <label for="emergency_given_name" class="block text-sm font-medium text-gray-700">Date Employment Started</label>
+                        <label for="emergency_given_name" class="block text-sm font-medium text-gray-700">Given name (s)</label>
                         <input type="text" id="emergency_given_name" name="emergency_given_name" class="mt-1 p-2 w-full border rounded-md">
                     </div>
 
                     <div class="col-span-2 sm:col-span-1">
-                        <label for="emergency_relationship" class="block text-sm font-medium text-gray-700">Date Employment Started</label>
+                        <label for="emergency_relationship" class="block text-sm font-medium text-gray-700">Relationship to you</label>
                         <input type="text" id="emergency_relationship" name="emergency_relationship" class="mt-1 p-2 w-full border rounded-md">
                     </div>
 
                     <div class="col-span-2 sm:col-span-1">
-                        <label for="prev_date_emp" class="block text-sm font-medium text-gray-700">Date Employment Started</label>
-                        <input type="tel" id="prev_date_emp" name="prev_date_emp" class="mt-1 p-2 w-full border rounded-md">
+                        <label for="emergency_contact" class="block text-sm font-medium text-gray-700">Contact</label>
+                        <input type="tel" id="emergency_contact" name="emergency_contact" class="mt-1 p-2 w-full border rounded-md">
                     </div>
                 </div>
             </div>
