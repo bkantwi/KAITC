@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
 {
-    public function index()
+
+    public function saveApplication(Request $request)
     {
-        return view('students/application');
+        
     }
+
 }
